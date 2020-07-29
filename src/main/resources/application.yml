@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:impala://192.168.10.164:21050/user_track;AuthMech=0
+    driver-class-name: com.cloudera.impala.jdbc41.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.michael.impalaProject.entity
+
+logging:
+  level:
+    com.michael.impala_project.dao: debug
